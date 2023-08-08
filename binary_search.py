@@ -1,13 +1,13 @@
 
-def binary_search(list, item):
+def binary_search(list_m: list, item: int) -> int:
     low = 0
-    high = len(list) - 1
+    high = len(list_m) - 1
     steps = 0
 
     while low <= high:
         steps += 1
         mid = (low + high) // 2
-        guess = list[mid]
+        guess = list_m[mid]
         if guess == item:
             print('значение найдено')
         if guess > item:
@@ -16,6 +16,5 @@ def binary_search(list, item):
             low = mid + 1
     return steps
 
-my_list = list(range(10))
-
-print(binary_search(my_list, 6))
+my_list = list(range(129))
+print(binary_search(my_list, 127))
