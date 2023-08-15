@@ -1,7 +1,4 @@
-
-
-
-def findSmallest(arr: list) -> int:
+def find_smallest(arr: list) -> int:
     """ возвращает индекс наименьшего элемента """
     smallest = arr[0]
     smallest_index = 0
@@ -12,12 +9,13 @@ def findSmallest(arr: list) -> int:
     return smallest_index
 
 
-def selectionSort(arr: list) -> list:
+def selection_sort(arr: list) -> list:
     """ возвращает отсортированный список """
-    newArr = []
+    new_arr = []
     for i in range(len(arr)):
-        smallest = findSmallest(arr) # принимает индекс наименьшего элемента
-        newArr.append(arr.pop(smallest)) # добавляет наименьший элемент в список, удаляет наименьший элемент
-    return newArr
+        smallest = find_smallest(arr)  # принимает индекс наименьшего элемента
+        new_arr.append(arr.pop(smallest))  # добавляет наименьший элемент в список, удаляет наименьший элемент
+    return new_arr
 
-print(selectionSort([5, 3, 6, 2, 10]))
+
+print(selection_sort([5, 3, 6,2,4,62,35, 2, 10]))
